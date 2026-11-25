@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+h1,h2,h3,span{
+  font-family: "Playfair Display", serif;
+}
+
+/* !Home Page */
+.home-page{
+  height: 100vh;
+  width: 100vw;
+}
+nav{
+  height: 12vh;
+  display: flex;
+  padding: 0px 6rem;
+  /* background: rgb(15, 15, 15); */
+}
+.nav-one{
+  flex-basis: 40%;
+  display: flex;
+  justify-content:flex-start;
+  align-items: center;
+}
+.nav-one>h1{
+  font-size: 2rem;
+  color: black;
+}
+.nav-one>h1>span{
+ color: red;
+}
+.nav-two{
+  flex-basis: 60%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 3rem;
+}
+.nav-two>a{
+ text-decoration: none;
+ font-weight: 500;
+ color: black;
+}
+
+header{
+  height: 88vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  /* background:  linear-gradient(to top left,#f23636,#1a0606,#1a0606,#1a0606, #1a0606, #c91d1d); */
+}
+
+header::selection{
+ color: white;
+ background-color: red;
+}
+
+#pfd{
+  border: 2px solid red;
+  padding: 10px;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: red;
+  background-color: rgba(255, 0, 0, 0.192);
+}
+#title{
+  text-align: center;
+  font-size: 4rem;
+  color: black;
+}
+
+#title>span{
+  color: red;
+}
+
+#description{
+  text-align: center;
+  line-height: 25px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: black;
+}
+
+
+.btn-group{
+  display: flex;
+  gap: 1rem;
+}
+
+.btn-group>button{
+  padding: 1rem 1.5rem;
+  border-radius: 30px;
+  background-color: transparent;
+  border: none;
+}
+
+#explore-btn{
+  background-color: red;
+  color: white;
+}
+
+#trending-btn{
+  background-color: white;
+  color: black;
+  border: 1px solid rgba(0, 0, 0, 0.356);
+}
