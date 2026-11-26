@@ -7,6 +7,9 @@
   <title>RedPlate — Premium Recipe Discovery</title>
   <link rel="shortcut icon" href="./assets/favicon.jfif" type="image/x-icon">
   <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css"
+    integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
 </head>
 
 <body>
@@ -36,6 +39,54 @@
         <button id="trending-btn">Trending Foods</button>
       </div>
     </header>
+  </section>
+  <!-- !Recipe Page -->
+  <section class="recipe-page">
+    <article class="discover-section">
+      <p id="discover-title">Discover</p>
+      <h1>All <span>Recipes</span></h1>
+      <p>Filter, search, and save what excites your palate.</p>
+      <div id="search-container">
+        <input type="text" placeholder="Search recipes...">
+        <select id="cuisines">
+          <option value="NA">All Cuisines</option>
+        </select>
+        <select id="meals">
+          <option value="NA">All Meals</option>
+        </select>
+        <select id="levels">
+          <option value="NA">All Levels</option>
+        </select>
+        <select id="ratings">
+          <option value="NA">Any Rating</option>
+        </select>
+      </div>
+    </article>
+    <article class="recipe-section">
+      <div class="card">
+        <div class="img-section">
+          <p class="recipe-level">Easy</p>
+          <img src="https://cdn.dummyjson.com/recipe-images/1.webp" alt="pizza">
+          <p class="wishlist">
+            <i class="fa-solid fa-heart"></i>
+          </p>
+        </div>
+        <div class="cuisine-rating">
+          <p class="recipe-cuisine">ITALIAN</p>
+          <p class="recipe-rating"><i class="fa-solid fa-star"></i> 4.6</p>
+        </div>
+        <h1 class="recipe-title">Classic Margherita Pizza</h1>
+        <div class="duration">
+          <p>35m <br> Total</p>
+          <p>300 <br> Cal</p>
+          <p>Dinner <br> Meal</p>
+        </div>
+        <div class="tags">
+          <p>Pizza</p>
+          <p>Italian</p>
+        </div>
+      </div>
+    </article>
   </section>
 </body>
 
