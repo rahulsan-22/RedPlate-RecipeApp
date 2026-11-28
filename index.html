@@ -14,14 +14,14 @@
 
 <body>
   <!-- !Home Page -->
-  <section class="home-page">
+  <section id="home-page">
     <nav>
       <aside class="nav-one">
         <h1>Red <span>Plate</span></h1>
       </aside>
       <aside class="nav-two">
-        <a href="#home">Home</a>
-        <a href="#recipes">Recipes</a>
+        <a href="#home-page">Home</a>
+        <a href="#recipe-page">Recipes</a>
         <a href="#favorites">Favorites</a>
         <a href="#contact">Contact</a>
       </aside>
@@ -32,7 +32,8 @@
         <span> Extraordinary</span> <br>
         <span>One Recipe at a Time</span>
       </h1>
-      <p id="description">Explore 50+ chef-curated recipes from around the world. Search,<br> filter, and save your favorites in one
+      <p id="description">Explore 50+ chef-curated recipes from around the world. Search,<br> filter, and save your
+        favorites in one
         beautifully crafted <br> experience.</p>
       <div class="btn-group">
         <button id="explore-btn">Explore Recipes</button>
@@ -41,7 +42,7 @@
     </header>
   </section>
   <!-- !Recipe Page -->
-  <section class="recipe-page">
+  <section id="recipe-page">
     <article class="discover-section">
       <p id="discover-title">Discover</p>
       <h1>All <span>Recipes</span></h1>
@@ -63,31 +64,20 @@
       </div>
     </article>
     <article class="recipe-section">
-      <div class="card">
-        <div class="img-section">
-          <p class="recipe-level">Easy</p>
-          <img src="https://cdn.dummyjson.com/recipe-images/1.webp" alt="pizza">
-          <p class="wishlist">
-            <i class="fa-solid fa-heart"></i>
-          </p>
-        </div>
-        <div class="cuisine-rating">
-          <p class="recipe-cuisine">ITALIAN</p>
-          <p class="recipe-rating"><i class="fa-solid fa-star"></i> 4.6</p>
-        </div>
-        <h1 class="recipe-title">Classic Margherita Pizza</h1>
-        <div class="duration">
-          <p>35m <br> Total</p>
-          <p>300 <br> Cal</p>
-          <p>Dinner <br> Meal</p>
-        </div>
-        <div class="tags">
-          <p>Pizza</p>
-          <p>Italian</p>
-        </div>
-      </div>
+
     </article>
   </section>
+  <!-- ! Trending Page -->
+   <section id="trending-page">
+     <div class="trending-title">
+      <p>Hot Right Now</p>
+      <h1>Trending <span>This Week</span></h1>
+     </div>
+     <div class="trending-recipes">
+        <main class="trending-recipes-slider"></main>
+     </div>
+   </section>
+  <script src="./script.js"></script>
 </body>
 
 </html>

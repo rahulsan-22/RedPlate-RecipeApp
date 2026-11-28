@@ -5,6 +5,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
+  scroll-behavior: smooth;
 }
 h1,
 h2,
@@ -19,7 +20,7 @@ span {
 }
 
 /* !Home Page */
-.home-page {
+#home-page {
   height: 100vh;
   width: 100vw;
   background: linear-gradient(
@@ -37,6 +38,7 @@ nav {
   display: flex;
   padding: 0px 6rem;
   position: fixed;
+  z-index: 100;
   top: 0px;
   width: 100%;
   background-color: black;
@@ -126,9 +128,9 @@ header {
 }
 
 /* ! Recipe Page */
-.recipe-page {
+#recipe-page {
   min-height: 100vh;
-  /* color: white; */
+  padding-top: 15vh ;
 }
 .discover-section {
   height: 45vh;
@@ -139,35 +141,36 @@ header {
   gap: 2rem;
 }
 
-#discover-title {
+#discover-title,.trending-title>p {
   text-transform: uppercase;
   font-size: 0.9rem;
   font-weight: 600;
   letter-spacing: 7px;
   color: red;
 }
-.discover-section > h1 {
+.discover-section > h1 ,.trending-title>h1{
   font-size: 3rem;
 }
-.discover-section > h1 > span {
+.discover-section > h1 > span,.trending-title>h1>span {
   color: red;
 }
 
 #search-container {
-  width: 70%;
+  width: 92%;
   padding: 1rem;
   border-radius: 10px;
-  background-color: rgba(0, 0, 0, 0.194);
+  border: 1px solid rgba(0, 0, 0, 0.229);
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 #search-container > input,
 select {
-  padding: 0.7rem 2rem;
+  padding: 0.7rem 4rem;
   border-radius: 10px;
-  border: none;
+  border: 1px solid rgba(0, 0, 0, 0.359);
 }
 select:focus {
   outline: 1px solid red;
@@ -175,26 +178,44 @@ select:focus {
 
 .recipe-section {
   min-height: 55vh;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  place-items: center;
 }
 
 .card {
-  height: 450px;
-  width: 400px;
-  border: 1px solid red;
+  min-height: 600px;
+  min-width: 400px;
+  border: 1px solid rgba(255, 0, 0, 0.354);
   border-radius: 20px;
-  /* background-color: rgba(0, 0, 0, 0.662); */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 20px;
+  transition: 0.2s;
+}
+.card:hover {
+  /* scale: 1.01; */
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .img-section {
   height: 60%;
   width: 100%;
   position: relative;
+  border-radius: 20px;
+  overflow: hidden;
 }
 .img-section > img {
   height: 100%;
+  border-radius: 20px;
   width: 100%;
-    border-radius: 20px;
   object-fit: cover;
+  transition: all 0.2s ease;
+}
+
+.img-section > img:hover {
+  scale: 1.1;
 }
 
 .recipe-level {
@@ -207,6 +228,7 @@ select:focus {
   font-weight: 600;
   top: 10px;
   left: 10px;
+  z-index: 99;
 }
 .wishlist {
   position: absolute;
@@ -225,52 +247,52 @@ select:focus {
 }
 .wishlist:hover {
   background-color: red;
-  scale: 1.1;
 }
-.cuisine-rating{
+.cuisine-rating {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 5px 10px;
 }
 
-.recipe-cuisine{
+.recipe-cuisine {
   color: red;
   font-size: 0.9rem;
-  font-weight: 600;
-  letter-spacing: 3px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
-.recipe-rating{
+.recipe-rating {
   font-size: 0.7rem;
   font-weight: 600;
 }
 
-.recipe-title{
+.recipe-title {
   font-size: 1.8rem;
   padding: 3px;
 }
 
-.duration{
+.duration {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px;
 }
-.duration>p{
+.duration > p {
   font-size: 0.9rem;
   font-weight: 500;
   text-align: center;
 }
 
-.tags{
+.tags {
   padding: 8px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   gap: 10px;
 }
-.tags>p{
+.tags > p {
   border: 2px solid red;
   padding: 3px 10px;
   border-radius: 30px;
@@ -279,3 +301,45 @@ select:focus {
   font-size: 0.9rem;
   font-weight: 600;
 }
+
+/* ! Trending Page*/
+#trending-page{
+  min-height: 100vh;
+}
+.trending-title{
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.trending-recipes{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.trending-recipes-slider{
+  width: 80%;
+  height: 90%;
+  display: flex;
+  overflow: hidden;
+}
+
+.trending-recipes-slider:hover>.card{
+ animation-play-state: paused;
+}
+.trending-recipes-slider>.card{
+  animation: slider 500s 0s ease infinite;
+}
+@keyframes slider{
+  from{
+    transform: translateX(0);
+  }to{
+   transform: translateX(-50000%);
+  }
+}
+
